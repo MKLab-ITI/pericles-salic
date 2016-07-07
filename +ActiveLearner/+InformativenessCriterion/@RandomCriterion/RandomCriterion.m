@@ -1,7 +1,8 @@
-classdef RandomCriterion < ActiveLearner.InstanceSelector.InformativenessCriterion.BaseCriterion
+classdef RandomCriterion < ActiveLearner.InformativenessCriterion.BaseCriterion
     %RANDOMSELECTOR Summary of this class goes here
     % Return 0.5 as a probability of selecting an image regardless of
     % feature values to accomodate random selection based on fusion tactics
+    % Use this for unimodal selection based on P(S|T).
     
     properties
     end
@@ -9,8 +10,9 @@ classdef RandomCriterion < ActiveLearner.InstanceSelector.InformativenessCriteri
     methods
         function obj = RandomCriterion() % constructor
         end
-        function obj = GetInformativeness(obj,feats)
-            obj.confidence_values = 0.5*ones(size(feats,1),1); 
+        function Informativeness_values = GetInformativeness(obj,feats)
+            obj.Informativeness_values = 0.5*ones(size(feats,1),1); 
+            Informativeness_values = obj.Informativeness_values;
         end
         
     end

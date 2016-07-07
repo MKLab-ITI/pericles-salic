@@ -3,9 +3,8 @@ classdef Evaluator
     %   Detailed explanation goes here
     
     properties
-        labels;
-        scores;
-        AP;
+        results; % matrix to store the performance of each concept at each iteration
+        AP; % average precision; can store the current evaluation results
         metric;
     end
     
@@ -13,13 +12,21 @@ classdef Evaluator
         function obj = Evaluator(metric)
             % set default
             obj.metric = 'AP'; % only AP has been implemented so far
+            results = [];
             if nargin > 0
                 obj.metric = metric; % otherwise must be a handle to an 
                 % evaluator function taking as input the true labels and 
                 % the predicted scores
             end
         end
-        function obj = evaluate(obj)
+        function AP = evaluate(obj,labels,scores)
+            switch obj.metric
+                case 'AP'
+                 obj.AP = averagePrecision(labels, scores);
+                otherwise
+                    obj.AP = obj.metric(labels,scores);
+            end
+            AP = obj.AP;
         end
         function AP = averagePrecision(labels, scores)
             [~,IDs] = sort(scores,'descend');

@@ -7,7 +7,7 @@ classdef (Abstract) BaseOracle < handle
     end
     
     methods (Abstract = true)
-        obj = GetOracleConfidence(obj,feats);
+        confidence_values = GetOracleConfidence(obj,feats);
     end
     
 end

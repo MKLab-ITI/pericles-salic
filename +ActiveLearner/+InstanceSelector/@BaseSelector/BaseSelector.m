@@ -1,17 +1,18 @@
 classdef (Abstract) BaseSelector < handle
-    %BASESELECTOR Summary of this class goes here
-    %   Detailed explanation goes here
+    %BASESELECTOR Abstract class for instance selectors
+    %   In order to use a different selector, the function SelectSamples
+    %   must be implemented returning the ids of the selected samples
+    %   corresponding to the Dataset ids, and the corresponding labels
     
     properties
-        Dataset;
-        selected_ids; % bx1 matrix. The ids of the b selected samples; 
+        probs; % the scores based on hich instances will be selected
+        nsamples; % number os samples to be selected
+        selected_ids; % nsamplesx1 the ids of the nsamples selected samples; 
         % they refer to the Dataset feats
-        labels; % bx1 the labels of the selected samples, i.e. a column 
-        % vector of {+1,-1}'s, one for each selected sample
     end
     
     methods (Abstract = true)
-        obj = SelectSamples(obj); % The fucntion that selects new samples
+        selected_ids = SelectSamples(obj); % The fucntion that selects new samples
     end
     
 end

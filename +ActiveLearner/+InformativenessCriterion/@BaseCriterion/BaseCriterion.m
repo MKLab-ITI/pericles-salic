@@ -7,7 +7,7 @@ classdef (Abstract) BaseCriterion < handle
     end
     
     methods(Abstract = true)
-        obj = GetInformativeness(obj,feats);
+        Informativeness_values = GetInformativeness(obj,feats);
     end
     
 end
