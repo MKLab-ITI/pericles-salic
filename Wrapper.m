@@ -25,14 +25,6 @@ prms.train_tag_folder = './data/datasets/imageclef/train_metadata/tags/'; % fold
 prms.pool_tag_folder = './data/datasets/mirflickr/tags/'; % folder where the pool tags are
 
 
-% my own paths - delete for release
-prms.train_img_folder = '/home/ehatzi/Data/ImageClef2012/Images/';
-prms.pool_img_folder = '/disk1/Data/MIRFlickr/images/';
-prms.test_img_folder = '/home/ehatzi/Data/ImageClef2012/Images/';
-prms.train_tag_folder = '/home/ehatzi/Data/ImageClef2012/train_metadata/tags/';
-prms.pool_tag_folder = '/disk1/Data/MIRFlickr/tags/';
-
-
 % visual features params
 prms.featpipe_folder = './'; % the folder where the /+featpipem/ and /models/ are (extracted from deepeval tool)
 prms.CNN_pretrained_model = 'CNN_M_128'; % the pretrained model to use
