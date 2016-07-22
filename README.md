@@ -2,6 +2,9 @@
 
 Social Active Learning for Image Classification
 
+http://mklab.iti.gr/research/salic
+
+
 Installation:
 
 1. clone the repository
@@ -22,3 +25,12 @@ Requirements:
 2. For MIRFLICKR (1m images as the pool dataset), 64GB of RAM is minimum
 
 3. The code was tested using Matlab 2012a
+
+
+If you use this code cite the following paper:
+
+Elisavet Chatzilari, Spiros Nikolopoulos, Yiannis Kompatsiaris, Josef Kittler, "SALIC: Social Active Learning for Image Classification", IEEE Transactions on Multimedia, 2016, accepted for publication
+
+URL: http://dx.doi.org/10.1109/TMM.2016.2565440
+
+
