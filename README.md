@@ -3,6 +3,7 @@
 Social Active Learning for Image Classification
 
 Installation:
+
 1. clone the repository
 
 2. Download and compile LIBSVM for your architecture https://www.csie.ntu.edu.tw/~cjlin/libsvm/
@@ -15,6 +16,7 @@ Installation:
 
 
 Requirements:
+
 1. There is only compatability for Linux (the ConvNet Feature Computation Package is not compatible with windows). If a different CNN feature extraction library is used that runs on Windows, the code should run on Windows as well (not tested)
 
 2. For MIRFLICKR (1m images as the pool dataset), 64GB of RAM is minimum
